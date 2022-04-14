@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.flyconcept.cameraapp">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f275c4 (Initial commit)
 	<uses-permission android:name="android.permission.BLUETOOTH" />
 	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 	<uses-permission android:name="android.permission.VIBRATE" />
@@ -22,9 +26,16 @@
 		android:name="android.hardware.usb.host"
 		android:required="false" />
 	<uses-feature
+<<<<<<< HEAD
 		tools:node="merge"
 		android:name="android.hardware.usb.accessory"
 		android:required="true" />
+=======
+		android:name="android.hardware.usb.accessory"
+		android:required="true"
+		tools:node="merge" />
+
+>>>>>>> 4f275c4 (Initial commit)
 	<application
 		android:allowBackup="true"
 		android:icon="@mipmap/ic_launcher"
@@ -32,6 +43,7 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/Theme.CameraApp">
+<<<<<<< HEAD
 		<uses-library android:name="com.android.future.usb.accessory" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
 		<meta-data
@@ -43,6 +55,27 @@
 			tools:node="merge"
 			android:name=".MainActivity"
 			android:exported="true">
+=======
+		<activity
+			android:name=".ConnectionActivity"
+			android:exported="false" />
+
+		<uses-library android:name="com.android.future.usb.accessory" />
+		<uses-library
+			android:name="org.apache.http.legacy"
+			android:required="false" />
+
+		<meta-data
+			android:name="com.dji.sdk.API_KEY"
+			android:value="ea371d156497c9a89f0668b2" />
+
+		<activity
+			android:name=".MainActivity"
+			android:configChanges="orientation"
+			android:exported="true"
+			android:screenOrientation="portrait"
+			tools:node="merge">
+>>>>>>> 4f275c4 (Initial commit)
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -51,6 +84,10 @@
 			<intent-filter>
 				<action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
 			</intent-filter>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f275c4 (Initial commit)
 			<meta-data
 				android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
 				android:resource="@xml/accessory_filter" />
